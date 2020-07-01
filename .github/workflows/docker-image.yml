@@ -15,6 +15,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v1
+        
       - name: Build Jenkins
         uses: docker/build-push-action@v1
         with: 
@@ -23,11 +24,15 @@ jobs:
           path: master
           repository: praqma/jcasc
           tag_with_ref: true
-#    - uses: actions/checkout@v2
-#    - name: Build the Jenkins docker image
-#      run: docker build master --tag jenkins:$(date +%s)
-
-    
-#    - uses: actions/checkout@v2
-#    - name: Build the Jenkins agent docker image
-#      run: docker build agent --tag agent:$(date +%s)
+          tag_with_sha: true
+          
+      - name: Build agent
+        uses: docker/build-push-action@v1
+        with: 
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          path: agent
+          repository: praqma/jcasc-agent
+          tag_with_ref: true
+          tag_with_sha: true          
+   
