@@ -31,6 +31,8 @@ RUN curl --create-dirs -sSLo /usr/share/jenkins/swarm-client-$JENKINS_SWARM_VERS
 #Install tool to do clean up of all unused docker layers and images
 RUN curl -s https://raw.githubusercontent.com/Praqma/docker-clean/master/docker-clean | tee /usr/local/bin/docker-clean > /dev/null && chmod +x /usr/local/bin/docker-clean
 
+COPY password.txt /tmp/password
+
 COPY start.sh /usr/local/bin/start.sh
 RUN chmod 755 /usr/local/bin/start.sh
 
