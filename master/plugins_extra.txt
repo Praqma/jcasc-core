@@ -4,6 +4,7 @@ build-failure-analyzer:latest
 cloudbees-folder:latest
 configuration-as-code:latest
 credentials:latest
+eiffel-broadcaster:latest
 envinject-api:latest
 envinject:latest
 job-dsl:latest
