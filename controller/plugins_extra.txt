@@ -18,4 +18,4 @@ powershell:latest
 scm-api:latest
 script-security:latest
 ssh-credentials:latest
-swarm:3.22
+swarm:latest
