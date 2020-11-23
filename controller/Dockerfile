@@ -17,4 +17,4 @@ ARG JAVA_OPTS
 
 ENV JAVA_OPTS "-Djenkins.CLI.disabled=true -Djenkins.install.runSetupWizard=false ${JAVA_PROXY:-} -Dorg.apache.commons.jelly.tags.fmt.timeZone=Europe/Stockholm ${JAVA_PROXY:-}"
 
-RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/plugins_extra.txt
+RUN jenkins-plugin-cli -f /usr/share/jenkins/ref/plugins_extra.txt
