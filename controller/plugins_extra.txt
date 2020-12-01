@@ -3,6 +3,7 @@ artifactory:latest
 build-failure-analyzer:latest
 cloudbees-folder:latest
 configuration-as-code:latest
+configuration-as-code-groovy:latest
 credentials:latest
 eiffel-broadcaster:latest
 envinject-api:latest
