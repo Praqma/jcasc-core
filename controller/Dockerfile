@@ -1,4 +1,4 @@
-FROM jenkins/jenkins:2.249.2
+FROM jenkins/jenkins:2.249.1
 COPY plugins_extra.txt /usr/share/jenkins/ref/plugins_extra.txt
 
 LABEL maintainer="ewelina.wilkosz@eficode.com"
