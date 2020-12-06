@@ -17,11 +17,11 @@ jobs:
 
       - name: Generate new plugins list 
         run: | 
-          echo Jenkins Version: $(sh ./jenkins-version.sh)
-          echo *******************************
           echo Current plugins versions:
-          echo cat controller/plugins_extra.txt
-          echo *******************************
+          cat controller/plugins_extra.txt
+          echo "*******************************
+          echo New Jenkins Version: $(sh ./jenkins-version.sh)
+          echo "*******************************"
           echo Updated plugins versions:
           curl -fsSL -O https://github.com/jenkinsci/plugin-installation-manager-tool/releases/download/2.3.0/jenkins-plugin-manager-2.3.0.jar
           java -jar jenkins-plugin-manager-2.3.0.jar --available-updates --output txt -f controller/plugins_extra.txt --jenkins-version $(sh ./jenkins-version.sh)
