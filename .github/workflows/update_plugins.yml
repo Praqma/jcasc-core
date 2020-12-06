@@ -2,7 +2,8 @@ name: Update plugins list
 
 on:
 
-  push: [ automatic-upgrade ]
+  push: 
+    branches: [ automatic-upgrade ]
   pull_request:
     branches: [ master, automatic-upgrade ]
 
