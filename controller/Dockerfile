@@ -2,7 +2,6 @@ FROM jenkins/jenkins:2.249.1
 COPY plugins_extra.txt /usr/share/jenkins/ref/plugins_extra.txt
 
 LABEL maintainer="ewelina.wilkosz@eficode.com"
-
 ENV JENKINS_HOME /var/jenkins_home
 
 # Add support for proxies.
