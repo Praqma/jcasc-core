@@ -19,7 +19,7 @@ jobs:
         run: | 
           echo Current plugins versions:
           cat controller/plugins_extra.txt
-          echo "*******************************
+          echo "*******************************"
           echo New Jenkins Version: $(sh ./jenkins-version.sh)
           echo "*******************************"
           echo Updated plugins versions:
