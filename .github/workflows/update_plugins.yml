@@ -16,6 +16,7 @@ jobs:
         uses: actions/checkout@v1
 
       - name: Generate new plugins list 
-        run: curl -fsSL -O https://github.com/jenkinsci/plugin-installation-manager-tool/releases/download/2.3.0/jenkins-plugin-manager-2.3.0.jar
-        run: sh ./jenkins-version.sh
-        run: ls -la 
+        run: | 
+          curl -fsSL -O https://github.com/jenkinsci/plugin-installation-manager-tool/releases/download/2.3.0/jenkins-plugin-manager-2.3.0.jar
+          sh ./jenkins-version.sh
+          ls -la 
