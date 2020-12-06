@@ -1,0 +1,18 @@
+name: Update plugins list
+
+on:
+
+  push: [ automatic-upgrade ]
+  pull_request:
+    branches: [ master, automatic-upgrade ]
+
+jobs:
+  upgrade:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Generate new plugins list 
+        run: ./jenkins-version.sh
