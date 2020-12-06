@@ -24,4 +24,6 @@ jobs:
           echo "*******************************"
           echo Updated plugins versions:
           curl -fsSL -O https://github.com/jenkinsci/plugin-installation-manager-tool/releases/download/2.3.0/jenkins-plugin-manager-2.3.0.jar
-          java -jar jenkins-plugin-manager-2.3.0.jar --available-updates --output txt -f controller/plugins_extra.txt --jenkins-version $(sh ./jenkins-version.sh)
+          java -jar jenkins-plugin-manager-2.3.0.jar --available-updates --output txt -f controller/plugins_extra.txt --jenkins-version $(sh ./jenkins-version.sh) > plugins.txt
+          cp plugins.txt controller/plugins_extra.txt
+          git status
